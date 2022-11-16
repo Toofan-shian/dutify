@@ -1,4 +1,7 @@
 <template>
+  <div class="dashboard">
+    <h1>Dash</h1>
+  </div>
 
 </template>
 
@@ -6,10 +9,6 @@
 
 
   export default {
-    name: 'Home',
 
-    components: {
-
-    },
   }
 </script>

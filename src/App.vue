@@ -2,8 +2,8 @@
   <v-app>
     <navbar/>
 
-    <v-main class="primary">
-
+    <v-main>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
