@@ -2,7 +2,7 @@
   <v-app>
     <navbar/>
 
-    <v-main class="blue">
+    <v-main class="primary">
 
     </v-main>
   </v-app>
