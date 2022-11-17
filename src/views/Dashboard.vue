@@ -7,7 +7,7 @@
       <v-layout row class="mb-3 mx-0 align-center">
 
         <span class="grey--text mr-3">Sort:   </span>
-        
+
         <v-btn text small color="grey" @click="sortBy('title')">
           <v-icon small left>mdi-folder</v-icon>
           <span class="caption text-lowercase">by project name</span>
@@ -41,9 +41,11 @@
 
           <v-flex xs6 sm4 md2>
             <v-row class="ma-0 fill-height" justify="end" align="center">
-              <v-chip small :class="`kos ${project.status} white--text caption`">
+              
+              <v-chip small :class="`${project.status} white--text caption`">
                 {{project.status}}
               </v-chip>
+
             </v-row>
           </v-flex>
 
