@@ -24,8 +24,11 @@
           </v-flex>
 
           <v-flex xs6 sm4 md2>
-            <div class="caption grey--text">Status</div>
-            <div>{{ project.status }}</div>
+            <v-row class="ma-0 fill-height" justify="end" align="center">
+              <v-chip small :class="`kos ${project.status} white--text caption`">
+                {{project.status}}
+              </v-chip>
+            </v-row>
           </v-flex>
 
         </v-layout>
@@ -61,5 +64,14 @@ export default {
 }
 .project.over-due {
   border-left: 4px solid tomato;
+}
+.v-chip.completed {
+  background: green !important;
+}
+.v-chip.ongoing {
+  background: orange !important;
+}
+.v-chip.over-due {
+  background: tomato !important;
 }
 </style>
