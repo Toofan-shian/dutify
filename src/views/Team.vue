@@ -16,7 +16,7 @@
             </v-card-text>
             <v-card-actions class="d-flex row justify-start pa-3">
               <v-btn  text class="text-lowercase" color="grey">
-                <v-icon left small>mdi-email</v-icon>
+                <v-icon left small>mdi-message</v-icon>
                 <span>send a massage</span>
               </v-btn>
             </v-card-actions>
