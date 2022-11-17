@@ -4,6 +4,22 @@
 
     <v-container class="my-5">
 
+      <v-layout row class="mb-3 mx-0 align-center">
+
+        <span class="grey--text mr-3">Sort:   </span>
+        
+        <v-btn text small color="grey" @click="sortBy('title')">
+          <v-icon small left>mdi-folder</v-icon>
+          <span class="caption text-lowercase">by project name</span>
+        </v-btn>
+
+        <v-btn text small color="grey" @click="sortBy('person')">
+          <v-icon small left>mdi-account</v-icon>
+          <span class="caption text-lowercase">by person</span>
+        </v-btn>
+
+      </v-layout>
+
       <v-card v-for="project in projects" :key="project.title" >
 
         <v-layout row wrap :class="`ma-0 project pa-5 ${project.status}`">
@@ -50,6 +66,11 @@ export default {
         {title: 'quit smoking', person: "toofan's Life", due: '11th aug 2022', status: 'completed'}
       ]
     }
+  },
+  methods: {
+    sortBy(prop) {
+      this.projects.sort((a, b) => a[prop] < b[prop] ? -1 : 1)
+    }
   }
 }
 </script>
@@ -74,4 +95,5 @@ export default {
 .v-chip.over-due {
   background: tomato !important;
 }
+
 </style>
