@@ -7,8 +7,10 @@
       <v-layout row>
         <v-flex xs12 sm6 md4 lg2 v-for="member in teamMembers" :key="member.name">
           <v-card class="text-center ma-2 pa-2">
-            <v-responsive min-height="100" >
-              img goes here 
+            <v-responsive class="pt-2">
+              <v-avatar size="100" class="" color="grey lighten-2">
+                <img :src="member.avatar"/>
+              </v-avatar>
             </v-responsive>
             <v-card-text>
               <div class="text-h6">{{member.name}}</div>
@@ -36,12 +38,12 @@ export default {
   data() {
     return {
       teamMembers: [
-        {name: 'asghar', role: 'chaghagh'},
-        {name: 'toofan', role: 'koskhol'},
-        {name: 'azie', role: 'lashi'},
-        {name: 'mojtaba', role: 'web developer'},
-        {name: 'sudabe', role: 'amre be maruf'},
-        {name: 'hanane', role: 'nahi az monkar'}
+        {name: 'asghar', role: 'chaghagh', avatar: '/avatar-1.png'},
+        {name: 'toofan', role: 'koskhol', avatar: '/avatar-2.png'},
+        {name: 'azie', role: 'lashi', avatar: '/avatar-3.png'},
+        {name: 'mojtaba', role: 'web developer', avatar: '/avatar-4.png'},
+        {name: 'sudabe', role: 'amre be maruf', avatar: '/avatar-5.png'},
+        {name: 'hanane', role: 'nahi az monkar', avatar: '/download.jpg'}
       ]
     }
   }
