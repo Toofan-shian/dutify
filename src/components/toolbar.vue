@@ -9,6 +9,7 @@
                 Dutify
             </v-app-bar-title>
             <v-spacer></v-spacer>
+
             <v-btn>
                 <span>Sign Out</span>
                 <v-icon right>
@@ -22,12 +23,17 @@
             v-model="drawer"
             class="primary"
         >
-        <v-layout col align-center class='mt-4'>
+        <v-layout align-center class='mt-4 flex-column'>
+
             <v-flex class="text-center">
               <v-avatar size="100" color="grey lighten-2">
                 <img src="/download.jpg"/>
               </v-avatar>
               <p class="white--text text-subtitle-1 mt-1 text-center">hanane</p>
+            </v-flex>
+
+            <v-flex>
+                <popup/>
             </v-flex>
         </v-layout>
             <v-list>
@@ -45,6 +51,7 @@
 </template>
 
 <script>
+import popup from './popup.vue'
 export default {
     data() {
         return {
@@ -56,6 +63,9 @@ export default {
             ]
         }
     },
+    components: {
+        popup
+    }
 }
 </script>
 
