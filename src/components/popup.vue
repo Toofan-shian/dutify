@@ -10,14 +10,13 @@
             dark
             v-on="on"
           >
-            Click Me
+            Add Project
           </v-btn>
         </template>
   
         <v-card>
           <v-card-title class="text-h5 grey lighten-2 justify-center py-4">
             <span>
-
                 Add A New Project
             </span>
           </v-card-title>
