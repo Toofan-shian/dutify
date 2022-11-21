@@ -6,7 +6,7 @@
       >
         <template v-slot:activator="{ on }">
           <v-btn
-            color="red lighten-2"
+            color="red lighten-2 mb-2"
             dark
             v-on="on"
           >
@@ -15,26 +15,33 @@
         </template>
   
         <v-card>
-          <v-card-title class="text-h5 grey lighten-2">
-            Privacy Policy
+          <v-card-title class="text-h5 grey lighten-2 justify-center py-4">
+            <span>
+
+                Add A New Project
+            </span>
           </v-card-title>
   
           <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <v-form>
+                <v-text-field
+                label="Title"
+                prepend-inner-icon="mdi-folder"
+                v-model="title"
+                ></v-text-field>
+
+                <v-textarea
+                label="info"
+                prepend-inner-icon="mdi-pencil"
+                v-model="info"
+                >
+                </v-textarea>
+                <v-btn class="success mx-0" @click="atSubmit">Add Project</v-btn>
+            </v-form>
           </v-card-text>
-  
-          <v-divider></v-divider>
-  
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn
-              color="primary"
-              text
-            >
-              I accept
-            </v-btn>
-          </v-card-actions>
+
         </v-card>
+
       </v-dialog>
     </div>
   </template>
@@ -44,7 +51,14 @@
     data () {
       return {
         dialog: false,
+        title: '',
+        info: ''
       }
     },
+    methods: {
+        atSubmit() {
+            console.log(this.title, this.info)
+        }
+    }
   }
 </script>

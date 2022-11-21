@@ -23,7 +23,7 @@
             v-model="drawer"
             class="primary"
         >
-        <v-layout align-center class='mt-4 flex-column'>
+        <v-layout column align-center class='mt-4'>
 
             <v-flex class="text-center">
               <v-avatar size="100" color="grey lighten-2">
