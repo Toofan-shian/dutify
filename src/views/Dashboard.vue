@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <h1 >Dash</h1>
+    <h1 class='text-center'>Dashboard</h1>
 
     <v-container class="my-5">
 
@@ -42,7 +42,7 @@
           <v-flex xs6 sm4 md2>
             <v-row class="ma-0 fill-height" justify="end" align="center">
               
-              <v-chip small :class="`${project.status} white--text caption`">
+              <v-chip small :class="`${project.status} white--text caption justify-center`">
                 {{project.status}}
               </v-chip>
 
@@ -90,12 +90,16 @@ export default {
 }
 .v-chip.completed {
   background: green !important;
+  min-width: 87px;
 }
 .v-chip.ongoing {
   background: orange !important;
+  min-width: 87px;
 }
 .v-chip.over-due {
   background: tomato !important;
+  min-width: 87px;
 }
+
 
 </style>
